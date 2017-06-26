@@ -59,8 +59,6 @@ GEN_Help_18                 : 'To have a secondary backup.',
 GEN_Help_19                 : 'In case you ever forget your password.',
 GEN_Help_20                 : 'Cold Storage',
 
-HELP_2a_Title               : 'How do I save/backup my wallet? ',
-
 GET_ConfButton              : 'I understand. Continue.',
 
 GEN_Label_5                 : 'Save Your `Private Key`. ',
@@ -448,6 +446,7 @@ HELP_1_Desc_3               : 'Enter a strong password. If you think you may for
 HELP_1_Desc_4               : 'Click "GENERATE". ',
 HELP_1_Desc_5               : 'Your wallet has now been generated. ',
 
+HELP_2a_Title               : 'How do I save/backup my wallet? ',
 HELP_2a_Desc_1              : 'You should always back up your wallet externally and in multiple physical locations - like on a USB drive and/or a piece of paper. ',
 HELP_2a_Desc_2              : 'Save the address. You can keep it to yourself or share it with others. That way, others can transfer ether to you. ',
 HELP_2a_Desc_3              : 'Save versions of the private key. Do not share it with anyone else. Your private key is necessary when you want to access your Ether to send it! There are 3 types of private keys ',
