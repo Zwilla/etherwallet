@@ -1,4 +1,5 @@
-<main class="tab-pane active" ng-if="globalService.currentTab==globalService.tabs.bulkGenerate.id" ng-controller='bulkGenCtrl'  ng-cloak>
+
+<main class="tab-pane active" ng-if="globalService.currentTab==globalService.tabs.bulkGenerate.id" ng-controller="bulkGenCtrl" ng-cloak>
 
   <h1 translate="NAV_BulkGenerate"> Bulk Generate Wallets </h1>
 
@@ -6,7 +7,7 @@
   <section class="row">
     <div class="col-md-6 col-sm-12 form-group">
       <h4 translate="BULK_Label_1">Number of Wallets To Generate</h4>
-      <input class="form-control" type="text" placeholder="{{ 'BULK_Label_1' | translate }}" ng-model="amount">
+      <input class="form-control" type="text" placeholder="{{'BULK_Label_1' | translate }}" ng-model="amount">
     </div>
     <div class="col-md-6 col-sm-12 form-group">
       <h4 translate="BULK_Label_2">Generate Wallets</h4>
@@ -30,22 +31,26 @@
       <article class="col-md-9">
         <table id="bulkgentable" class="table">
           <thead>
-            <tr>
-              <th width="32"> Address Identicon </th>
-              <th width="500" translate="x_Address">Address</th>
-              <th width="500" translate="x_PrivKey">Private Key (unencrypted)</th>
-            </tr>
-            <tr class="privaddkey" ng-repeat="wallet in wallets">
+          <tr>
+            <th width="32"> Address Identicon </th>
+            <th width="500" translate="x_Address">Address</th>
+            <th width="500" translate="x_PrivKey">Private Key (unencrypted)</th>
+          </tr>
+          <tr class="privaddkey" ng-repeat="wallet in wallets">
             <td>
-                <div class="addressIdenticon" title="Address Indenticon" blockie-address="{{wallet.getAddressString()}}" watch-var="wallet"></div>
+              <div class="addressIdenticon" title="Address Indenticon" blockie-address="{{wallet.getAddressString()}}" watch-var="wallet"></div>
             </td>
             <td>
-                <textarea class="form-control" rows="4" type="text" readonly>{{wallet.getChecksumAddressString()}}</textarea>
+              <label>
+                <textarea class="form-control" rows="4" readonly>{{wallet.getChecksumAddressString()}}</textarea>
+              </label>
             </td>
             <td>
-                <textarea class="form-control" rows="4" type="text" readonly>{{wallet.getPrivateKeyString()}}</textarea>
+              <label>
+                <textarea class="form-control" rows="4" readonly>{{wallet.getPrivateKeyString()}}</textarea>
+              </label>
             </td>
-            </tr>
+          </tr>
           </thead>
         </table>
       </article>
@@ -74,3 +79,4 @@
   <!-- / Bottom - Display Bulk Generated Wallets -->
 
 </main>
+
